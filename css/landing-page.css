@@ -1,9 +1,10 @@
 :root {
   --color-background: #1F2937;
-  --color-white: #FFFFFF;
+  --color-white: #F9FAF8;
   --color-black: #000000;
+  --color-button: #3882F6;
+  --color-image-placeholder: #6e747e;
 }
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -12,6 +13,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* NAVBAR */
 
 .navbar {
   background-color: var(--color-background);
@@ -22,21 +25,137 @@ body {
 
 .navbar ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar a {
-    color: var(--color-white);
-    text-decoration: none;
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .navbar-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-
 
 nav ul {
   display: flex;
   gap: 20px;
+}
+
+.header-logo-text {
+  font-size: 24px;
+  color: var(--color-white);
+}
+
+/* HERO */
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 40px 20px;
+  background-color: var(--color-background);
+  color: var(--color-white);
+  flex-wrap: wrap;
+}
+
+.hero-main-text {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.secondary-text {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hero-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 450px;
+  max-width: 100%;
+}
+
+.hero-content-right {
+  background-color: var(--color-image-placeholder);
+  width: 450px;
+  height: 200px;
+  max-width: 100%;
+}
+
+.hero-content-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-button {
+  background-color: var(--color-button);
+  color: var(--color-white);
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-content-left {
+    align-items: center;
+  }
+
+  .hero-main-text {
+    font-size: 36px;
+  }
+
+  .secondary-text {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-main-text {
+    font-size: 28px;
+  }
+
+  .secondary-text {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    font-size: small;
+    padding: 8px 16px;
+  }
 }
