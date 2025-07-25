@@ -12,3 +12,31 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.navbar {
+  background-color: var(--color-background);
+  color: var(--color-white);
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
