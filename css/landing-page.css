@@ -1,9 +1,10 @@
 :root {
-  --color-background: #1F2937;
+  --color-blue-black: #1F2937;
   --color-white: #F9FAF8;
   --color-black: #000000;
-  --color-button: #3882F6;
-  --color-image-placeholder: #6e747e;
+  --color-blue: #3882F6;
+  --color-grey: #6e747e;
+  --color-light-grey: #E5E7EB;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 /* NAVBAR */
 
 .navbar {
-  background-color: var(--color-background);
+  background-color: var(--color-blue-black);
   color: var(--color-white);
   padding: 20px;
   text-align: center;
@@ -36,7 +37,7 @@ body {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -59,8 +60,9 @@ nav ul {
   align-items: center;
   justify-content: center;
   gap: 80px;
-  padding: 40px 20px;
-  background-color: var(--color-background);
+  padding: 100px 20px;
+  padding-bottom: 200px;
+  background-color: var(--color-blue-black);
   color: var(--color-white);
   flex-wrap: wrap;
 }
@@ -79,12 +81,12 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 450px;
+  width: 550px;
   max-width: 100%;
 }
 
 .hero-content-right {
-  background-color: var(--color-image-placeholder);
+  background-color: var(--color-grey);
   width: 450px;
   height: 200px;
   max-width: 100%;
@@ -97,7 +99,7 @@ nav ul {
 }
 
 .cta-button {
-  background-color: var(--color-button);
+  background-color: var(--color-blue);
   color: var(--color-white);
   font-size: large;
   padding: 10px 20px;
@@ -105,6 +107,80 @@ nav ul {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+/* CONTENT */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.content-title {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--color-blue-black);
+  font-weight: 900;
+}
+
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+  gap: 20px;
+
+}
+
+.content-card {
+  background-color: var(--color-white);
+  padding: 20px;
+  width: 200px;
+  color: var(--color-grey);
+}
+
+.content-image {
+  border: #3882F6 4px solid;
+  border-radius: 10px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+/* QUOTE SECTION */
+
+.quote-container {
+  background-color: var(--color-light-grey);
+  color: var(--color-blue-black);
+  padding: 50px 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.quote-text {
+  font-size: 36px;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-weight: 200;
+  width: 800px;
+}
+
+.quote-author {
+  font-size: 24px;
+  font-weight: 600;
+  align-self: flex-end;
+  text-align: right;
 }
 
 /* MEDIA QUERIES */
